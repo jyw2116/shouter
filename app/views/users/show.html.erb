@@ -1,2 +1,10 @@
 <h2><%= @user.email %></h2>
 
+<div class="sidebar">
+	<%= follow_button @user %>
+</div>
+
+<div class="timeline">
+  <h2>Shouts</h2>
+  <%= render @shouts %>
+</div>

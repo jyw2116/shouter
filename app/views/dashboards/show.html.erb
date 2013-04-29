@@ -14,11 +14,5 @@
 
 <div class="timeline">
   <h2>Shouts</h2>
-  <% @shouts.each do |shout| %>
-    <div class="shout">
-      <%= shout.user.email %> shouted
-      <%= render shout.content %>
-      <div class="time"><%= time_ago_in_words(shout.created_at) %> ago</div>
-    </div>
-  <% end %>
+    <%= render @shouts %>
 </div>

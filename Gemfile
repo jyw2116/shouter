@@ -10,6 +10,11 @@ gem 'sqlite3'
 gem 'clearance', '1.0.0.rc7'
 gem 'paperclip'
 
+group :development, :test do
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
