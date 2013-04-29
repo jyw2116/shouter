@@ -5,10 +5,15 @@
   <%= form.submit "Shout!" %>
 <% end %>
 
+<%= form_for @photo_shout do |form| %>
+  <%= form.file_field :photo %>
+  <%= form.submit "PhotoShout!" %>
+<% end %>
+
 <% @shouts.each do |shout| %>
 	<div>
 		<%= shout.user.email %> shouted
 	  <%= render shout.content %>
-	  <%= time_ago_in_words(shout.created_at) %>
+	  <%= time_ago_in_words(shout.created_at) %> ago
 	</div>
 <% end%>

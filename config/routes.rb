@@ -8,4 +8,6 @@ Shouter::Application.routes.draw do
   #get "dashboard" => "dashboards#show"
   
   resources :text_shouts, only: [:create]
+  resources :photo_shouts, only: [:create]
+  resources :users, only: [:show]
 end

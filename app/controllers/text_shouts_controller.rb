@@ -4,4 +4,10 @@ class TextShoutsController < ApplicationController
 		shout = current_user.shouts.create(content: text_shout)
 		redirect_to dashboard_path, notice: "You shouted!"
 	end 
+
+	private
+
+	def shout_content
+		PhotoShout.new(params[:photo_shout])
+	end
 end
