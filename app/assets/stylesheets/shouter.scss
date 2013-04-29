@@ -1,0 +1,37 @@
+.shout {
+  padding: 10px;
+  border-top: 1px solid #EEE;
+  position: relative;
+  .time {
+    color: #BBB;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.timeline {
+  padding: 10px 0;
+  width: 500px;
+  float: right;
+  border-bottom: 1px solid #EEE;
+}
+
+.container {
+  width: 880px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  background: #EEE;
+  border-radius: 5px;
+  width: 330px;
+  float: left;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+h2, p {
+  margin: 0;
+  padding: 0;
+}
