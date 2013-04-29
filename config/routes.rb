@@ -5,5 +5,7 @@ Shouter::Application.routes.draw do
 
   resource  :dashboard, only: [:show]
   # or could do this... but this is the least extensible
-  get "dashboard" => "dashboards#show"
+  #get "dashboard" => "dashboards#show"
+  
+  resources :shouts, only: [:create]
 end
