@@ -4,11 +4,15 @@
   <%= form_for @dashboard.new_text_shout do |form| %>
     <%= form.text_field :body, placeholder: "Shout here" %>
     <%= form.submit "Shout!" %>
+    <%= check_box_tag :public, "1", true, id: "text_shout_public" %>
+    <%= label_tag "text_shout_public", "Public" %>
   <% end %>
 
   <%= form_for @dashboard.new_photo_shout do |form| %>
 	  <%= form.file_field :photo %>
-	  <%= form.submit "PhotoShout!" %>
+	  <%= form.submit "Shout!" %>
+	  <%= check_box_tag :public, "1", true, id: "photo_shout_public" %>
+	  <%= label_tag "photo_shout_public", "Public" %>
 <% end %>
 </div>
 

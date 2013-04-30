@@ -19,8 +19,16 @@ module Concerns
 	  	followed_users << user
 	  end
 
+	  def following? user
+	  	followed_user_ids.include? user.id
+	  end
+
 	  def self_and_followed_user_ids
 	    [id] + followed_user_ids
 	  end
 	end
 end
+
+
+
+

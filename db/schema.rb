@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429204413) do
+ActiveRecord::Schema.define(:version => 20130430193216) do
 
   create_table "following_relationships", :force => true do |t|
     t.integer  "follower_id"
@@ -33,10 +33,11 @@ ActiveRecord::Schema.define(:version => 20130429204413) do
 
   create_table "shouts", :force => true do |t|
     t.integer  "user_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "content_type"
     t.integer  "content_id"
+    t.boolean  "public",       :default => true
   end
 
   add_index "shouts", ["user_id"], :name => "index_shouts_on_user_id"
