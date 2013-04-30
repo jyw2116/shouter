@@ -19,8 +19,6 @@ module Concerns
 	  	followed_users << user
 	  end
 
-	  private
-
 	  def self_and_followed_user_ids
 	    [id] + followed_user_ids
 	  end
