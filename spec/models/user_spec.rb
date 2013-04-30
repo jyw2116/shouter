@@ -8,6 +8,13 @@ describe User do
 		# user.can_follow?(user).should == false
 	end
 
+	it "#can_follow? unless already following" do
+		user = create(:user)
+		followed_user = create(:user)
+		user.follow followed_user
+		user.can_follow?(followed_user).should == false
+	end
+
 	it "#can_follow? everyone else" do
 		follower = create(:user)
 		unfollowed_user = create(:user)
